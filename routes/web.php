@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FavoriteSiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +13,4 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('favorite-sites/create', [FavoriteSiteController::class, 'create']);
