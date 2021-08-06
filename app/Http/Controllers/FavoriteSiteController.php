@@ -14,7 +14,13 @@ class FavoriteSiteController extends Controller
      */
     public function index()
     {
-        return 'index';
+        // モデルから全データ取得
+        $favoriteSites=FavoriteSite::get();
+
+        // リダイレクトcreate-sites.index
+        return view('favorite-sites.index',[
+            'favoriteSites'=>$favoriteSites
+        ]);
     }
 
     /**

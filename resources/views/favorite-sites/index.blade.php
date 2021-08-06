@@ -1,0 +1,3 @@
+@php
+    ddd($favoriteSites);
+@endphp
