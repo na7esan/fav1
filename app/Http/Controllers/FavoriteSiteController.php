@@ -17,7 +17,7 @@ class FavoriteSiteController extends Controller
         // モデルから全データ取得
         $favoriteSites=FavoriteSite::get();
 
-        // リダイレクトcreate-sites.index
+        // リダイレクト
         return view('favorite-sites.index',[
             'favoriteSites'=>$favoriteSites
         ]);
