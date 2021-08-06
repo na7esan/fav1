@@ -35,7 +35,18 @@ class FavoriteSiteController extends Controller
      */
     public function store(Request $request)
     {
-        return 'store';
+        // モデル作成
+        $favoriteSite= new FavoriteSite();
+
+        // モデルにデータの代入
+        $favoriteSite->title=$request->title;
+        $favoriteSite->url=$request->url;
+
+        // モデルの保存
+        $favoriteSite->save();
+
+        // クリエイトサイトにリダイレクト
+        return view('favorite-sites/create');
     }
 
     /**
